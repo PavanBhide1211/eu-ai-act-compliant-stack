@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "locale": "fr",
+    "name": "Français",
+    "schema_version": 1,
+    "reviewer": "seed (non révisé par un traducteur professionnel)",
+    "reviewed_on": "2026-05-14"
+  },
+  "ui": {
+    "app_title": "Pile IA conforme au règlement IA de l'UE — démonstration côte à côte",
+    "subtitle": "Les deux backends produisent une recommandation de présélection de CV à partir des mêmes entrées. Le backend traditionnel renvoie uniquement la réponse. Le backend conforme renvoie en plus les preuves, les contrôles et la surface de supervision exigés par le règlement IA de l'UE pour un système à haut risque (Annexe III, point 4(a)).",
+    "job_label": "Description de poste",
+    "candidate_label": "CV du candidat",
+    "run_button": "Exécuter les deux piles",
+    "running": "Calcul en cours...",
+    "language": "Langue"
+  },
+  "panels": {
+    "traditional_title": "Pile traditionnelle",
+    "traditional_tag": "le modèle seul",
+    "traditional_callout": "Pas d'explication. Pas de confiance. Pas de journal d'audit. Pas de supervision. Pas de fiche de modèle. Pas de contrôle de biais. Pas d'information du candidat. Voilà à quoi ressemble la présélection IA dans la plupart des systèmes en production aujourd'hui — et ce n'est pas conforme pour un cas d'usage à haut risque au sens du règlement IA de l'UE.",
+    "compliant_title": "Pile conforme",
+    "compliant_tag": "le modèle + les contrôles du règlement IA de l'UE",
+    "empty": "Exécutez la présélection pour voir les résultats.",
+    "explanation_heading": "Explication",
+    "envelope_heading": "Enveloppe de conformité",
+    "envelope_intended": "Finalité prévue vérifiée",
+    "envelope_pseudonymised": "Entrée pseudonymisée",
+    "envelope_audit": "Événement d'audit enregistré",
+    "envelope_bias": "Métriques de biais actualisées",
+    "envelope_two_person": "Double regard requis",
+    "score": "score",
+    "confidence": "confiance"
+  },
+  "compliance": {
+    "sidecar_title": "Panneau de conformité — preuves en direct pour la requête {request_id}",
+    "sidecar_blurb": "Ce panneau s'affiche à côté de la décision afin que la personne qui supervise puisse agir avec les preuves sous les yeux. C'est aussi la surface que l'auditeur du déployeur et l'autorité nationale de surveillance du marché examineront.",
+    "tab_oversight": "Article 14 — Supervision humaine",
+    "tab_audit": "Article 12 — Journal d'audit",
+    "tab_model_card": "Article 13 — Fiche de modèle",
+    "tab_bias": "Article 15/72 — Suivi des biais",
+    "oversight_blurb": "L'article 14 exige que le système soit conçu de telle sorte qu'une personne compétente puisse intervenir, écraser la décision ou refuser d'utiliser la sortie de l'IA. Les contrôles ci-dessous sont des points d'API à part entière, pas une surcouche d'interface. Une justification est exigée et conservée dans le journal d'audit.",
+    "reviewer_id": "Identifiant du superviseur",
+    "action": "Action",
+    "override_to": "Écraser vers",
+    "rationale": "Justification (10 caractères ou plus)",
+    "record_action": "Enregistrer l'action de supervision",
+    "history_heading": "Historique des supervisions pour cette décision",
+    "no_actions": "Aucune action pour l'instant.",
+    "audit_blurb": "L'article 12 exige la journalisation automatique des événements pertinents pour l'identification des risques et la surveillance post-commercialisation. Chaque événement ci-dessous fait partie d'une chaîne de hachage ; la vérification à droite confirme l'intégrité de la chaîne.",
+    "chain_ok": "Vérification de la chaîne : OK",
+    "chain_broken": "Vérification de la chaîne : ROMPUE",
+    "model_card_blurb": "Article 13 — transparence vis-à-vis du déployeur. Cette fiche est générée à partir des mêmes sources de vérité que celles avec lesquelles le système fonctionne, donc dès qu'un élément change — registre des risques, traçabilité des données, exactitude déclarée — la fiche change avec lui.",
+    "bias_blurb": "Article 15 (exactitude / robustesse) + Article 72 (surveillance post-commercialisation). Les écarts de taux de présélection entre cohortes pseudonymisées sont calculés en continu ; une alerte est levée lorsque le seuil configuré est dépassé. Les cohortes sont : langue + tranche d'expérience, dérivées sous les garanties de l'article 10(5).",
+    "recompute": "Recalculer maintenant",
+    "annex_iv_link": "Dossier technique complet de l'Annexe IV"
+  },
+  "disclosure": {
+    "candidate": "Vous êtes évalué·e avec l'aide d'un système d'intelligence artificielle. L'IA ne produit qu'une recommandation ; toute décision de recrutement est prise par une recruteuse ou un recruteur humain. Vous avez le droit de demander un examen humain de toute évaluation assistée par IA et de contester le résultat. Contact : compliance@example.eu."
+  },
+  "errors": {
+    "request_failed": "Échec de la requête",
+    "rationale_too_short": "La justification doit comporter au moins 10 caractères."
+  }
+}

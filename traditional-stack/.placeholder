@@ -1,0 +1,1 @@
+Day 2 deliverable. Deliberately minimal "just call the model" CV screening baseline with the same API surface as the compliant backend. No audit log, no oversight controls, no model card, no bias monitor — used to make the compliance delta visible in the side-by-side UI.
