@@ -1,0 +1,50 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    container_name: compliant-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - COMPLIANCE_DB_PATH=/app/data/compliance.db
+      - LITELLM_PROVIDER=${LITELLM_PROVIDER:-stub}
+      - LITELLM_MODEL=${LITELLM_MODEL:-stub-cv-scorer-v1}
+      - CORS_ORIGINS=["http://localhost:5173","http://frontend:5173"]
+    volumes:
+      - backend-data:/app/data
+      # Mount i18n locales for hot-reload during demo / patching
+      - ./i18n:/app/i18n:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 15s
+      timeout: 3s
+      retries: 5
+
+  traditional:
+    build: ./traditional-stack
+    container_name: traditional-backend
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/health')"]
+      interval: 15s
+      timeout: 3s
+      retries: 5
+
+  frontend:
+    build: ./frontend
+    container_name: compliant-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_COMPLIANT_API=http://localhost:8000
+      - VITE_TRADITIONAL_API=http://localhost:8001
+    depends_on:
+      backend:
+        condition: service_healthy
+      traditional:
+        condition: service_healthy
+
+volumes:
+  backend-data:

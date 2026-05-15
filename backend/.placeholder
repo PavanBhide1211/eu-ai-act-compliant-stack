@@ -1,0 +1,11 @@
+Day 2 deliverable. Will contain FastAPI app with compliance modules:
+- app/compliance/intended_purpose.py
+- app/compliance/risk_register.py
+- app/compliance/data_lineage.py
+- app/compliance/bias_monitor.py
+- app/compliance/audit_log.py
+- app/compliance/oversight.py
+- app/compliance/model_card.py
+- app/compliance/docgen.py
+- app/api/screening.py
+- app/main.py

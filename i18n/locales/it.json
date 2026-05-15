@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "locale": "it",
+    "name": "Italiano",
+    "schema_version": 1,
+    "reviewer": "seed (non revisionato da traduttore professionista)",
+    "reviewed_on": "2026-05-14"
+  },
+  "ui": {
+    "app_title": "Stack IA conforme al Regolamento IA dell'UE — demo affiancata",
+    "subtitle": "Entrambi i backend producono una raccomandazione di selezione CV a partire dagli stessi input. Quello tradizionale restituisce solo la risposta. Quello conforme restituisce anche le prove, i controlli e la superficie di sorveglianza richiesti dal Regolamento IA dell'UE per un sistema ad alto rischio (Allegato III, punto 4(a)).",
+    "job_label": "Descrizione del ruolo",
+    "candidate_label": "CV del candidato",
+    "run_button": "Esegui entrambi gli stack",
+    "running": "Valutazione in corso...",
+    "language": "Lingua"
+  },
+  "panels": {
+    "traditional_title": "Stack tradizionale",
+    "traditional_tag": "solo il modello",
+    "traditional_callout": "Nessuna spiegazione. Nessuna confidenza. Nessun registro di audit. Nessuna sorveglianza. Nessuna scheda del modello. Nessun controllo dei bias. Nessuna informativa al candidato. Così appare oggi la selezione assistita da IA nella maggior parte dei sistemi in produzione — e non è conforme per un caso d'uso ad alto rischio del Regolamento IA dell'UE.",
+    "compliant_title": "Stack conforme",
+    "compliant_tag": "il modello + i controlli del Regolamento IA dell'UE",
+    "empty": "Eseguire la valutazione per visualizzare i risultati.",
+    "explanation_heading": "Spiegazione",
+    "envelope_heading": "Busta di conformità",
+    "envelope_intended": "Finalità prevista verificata",
+    "envelope_pseudonymised": "Input pseudonimizzato",
+    "envelope_audit": "Evento di audit registrato",
+    "envelope_bias": "Metriche dei bias aggiornate",
+    "envelope_two_person": "Doppia revisione obbligatoria",
+    "score": "punteggio",
+    "confidence": "confidenza"
+  },
+  "compliance": {
+    "sidecar_title": "Pannello di conformità — prove in tempo reale per la richiesta {request_id}",
+    "sidecar_blurb": "Questo pannello è mostrato accanto alla decisione affinché chi supervisiona possa agire con le prove sotto gli occhi. È anche la superficie che ispezioneranno l'auditor del deployer e l'autorità nazionale di vigilanza del mercato.",
+    "tab_oversight": "Articolo 14 — Sorveglianza umana",
+    "tab_audit": "Articolo 12 — Registro di audit",
+    "tab_model_card": "Articolo 13 — Scheda del modello",
+    "tab_bias": "Articolo 15/72 — Monitoraggio dei bias",
+    "oversight_blurb": "L'articolo 14 richiede che il sistema sia progettato in modo che una persona competente possa intervenire, sovrascrivere o rifiutare l'uso dell'output dell'IA. I controlli qui sotto sono endpoint a tutti gli effetti, non un livello di interfaccia. La motivazione è obbligatoria e viene conservata nel registro di audit.",
+    "reviewer_id": "ID del revisore",
+    "action": "Azione",
+    "override_to": "Sovrascrivi a",
+    "rationale": "Motivazione (almeno 10 caratteri)",
+    "record_action": "Registra l'azione di sorveglianza",
+    "history_heading": "Cronologia della sorveglianza per questa decisione",
+    "no_actions": "Nessuna azione finora.",
+    "audit_blurb": "L'articolo 12 impone la registrazione automatica degli eventi rilevanti per l'identificazione del rischio e la sorveglianza post-commercializzazione. Ogni evento qui sotto fa parte di una catena di hash; la verifica a destra conferma l'integrità della catena.",
+    "chain_ok": "Verifica della catena: OK",
+    "chain_broken": "Verifica della catena: INTERROTTA",
+    "model_card_blurb": "Articolo 13 — trasparenza verso il deployer. Questa scheda è generata dalle stesse fonti di verità con cui opera il sistema, quindi non appena cambia qualcosa — registro dei rischi, lineage dei dati, accuratezza dichiarata — la scheda cambia di conseguenza.",
+    "bias_blurb": "Articolo 15 (accuratezza / robustezza) + Articolo 72 (sorveglianza post-commercializzazione). Le differenze nei tassi di selezione tra coorti pseudonimizzate sono calcolate in continuo; viene emesso un allarme quando si supera la soglia configurata. Coorti = lingua + fascia di esperienza, derivate sotto le garanzie dell'articolo 10(5).",
+    "recompute": "Ricalcola ora",
+    "annex_iv_link": "Pacchetto completo di documentazione tecnica dell'Allegato IV"
+  },
+  "disclosure": {
+    "candidate": "Stai venendo valutata/o con l'ausilio di un sistema di intelligenza artificiale. L'IA produce solo una raccomandazione; ogni decisione di assunzione è presa da una persona reclutatrice. Hai il diritto di richiedere una revisione umana di qualsiasi valutazione assistita dall'IA e di contestarne l'esito. Contatto: compliance@example.eu."
+  },
+  "errors": {
+    "request_failed": "Richiesta non riuscita",
+    "rationale_too_short": "La motivazione deve contenere almeno 10 caratteri."
+  }
+}

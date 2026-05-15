@@ -1,0 +1,98 @@
+{
+  "project": "eu-ai-act-compliant-stack",
+  "version": "1.0.0",
+  "status": "complete",
+  "started_on": "2026-05-12",
+  "completed_on": "2026-05-14",
+  "user_plan": "claude_pro",
+  "token_budget": {
+    "assumed_daily_standard_tokens": 300000,
+    "working_ceiling_80pct": 240000,
+    "unit": "input_plus_output_tokens",
+    "total_consumed_estimate": 155000
+  },
+  "scope": {
+    "part_1": "EU AI Act overview and business impact",
+    "part_2": "Service provider and data handler implications",
+    "part_3": "Critical operational aspects",
+    "part_4": "Demo codebase: compliant vs traditional AI stack",
+    "part_5": "Multilingual support with pluggable language patching"
+  },
+  "decisions": {
+    "demo_use_case": "AI-assisted CV screening (Annex III, point 4(a), high-risk)",
+    "backend_stack": "Python 3.11 + FastAPI",
+    "frontend_stack": "React (Vite)",
+    "storage": "SQLite (audit log, model registry, decision log)",
+    "model_layer": "LiteLLM (stub-by-default; provider-agnostic)",
+    "seed_locales": ["en", "de", "fr", "es", "it"],
+    "doc_format": "Markdown in repo"
+  },
+  "schedule": [
+    {
+      "day": 1,
+      "date": "2026-05-12",
+      "scope": ["Parts 1-3 explainers", "Repo scaffolding", "Progress tracker"],
+      "estimated_tokens": 28000,
+      "status": "completed"
+    },
+    {
+      "day": 2,
+      "date": "2026-05-13",
+      "scope": [
+        "Compliant backend (FastAPI) with 8 compliance modules",
+        "Traditional baseline stack",
+        "React frontend with ComplianceSidecar",
+        "docker-compose",
+        "Architecture comparison doc"
+      ],
+      "estimated_tokens": 79500,
+      "status": "completed"
+    },
+    {
+      "day": 3,
+      "date": "2026-05-14",
+      "scope": [
+        "i18n framework (backend + frontend)",
+        "Seed locales (EN, DE, FR, ES, IT)",
+        "patch_locale.py CLI",
+        "Smoke tests + compliance conformance tests",
+        "End-to-end run guide",
+        "Final README + PROGRESS pass"
+      ],
+      "estimated_tokens": 50000,
+      "status": "completed"
+    }
+  ],
+  "compliance_module_map": {
+    "article_8": "backend/app/compliance/intended_purpose.py + backend/app/system_intended_purpose.yaml",
+    "article_9": "backend/app/compliance/risk_register.py",
+    "article_10": "backend/app/compliance/data_lineage.py",
+    "article_11_and_annex_iv": "backend/app/compliance/docgen.py",
+    "article_12": "backend/app/compliance/audit_log.py",
+    "article_13": "backend/app/compliance/model_card.py",
+    "article_14": "backend/app/compliance/oversight.py",
+    "article_15_and_72": "backend/app/compliance/bias_monitor.py",
+    "article_50": "backend/app/api/compliance_routes.py (candidate_disclosure)"
+  },
+  "test_coverage": {
+    "smoke_tests": "tests/test_smoke.py",
+    "compliance_conformance_tests": "tests/test_compliance.py",
+    "fixtures": "tests/conftest.py"
+  },
+  "i18n": {
+    "loader": "i18n/loader.py",
+    "cli": "i18n/patch_locale.py",
+    "seed_locales": ["en", "de", "fr", "es", "it"],
+    "production_review_required": true
+  },
+  "regulatory_references": {
+    "primary_regulation": "Regulation (EU) 2024/1689",
+    "entered_into_force": "2024-08-01",
+    "key_application_milestones": {
+      "2025-02-02": "Article 5 prohibitions apply",
+      "2025-08-02": "GPAI obligations, governance, penalties apply",
+      "2026-08-02": "Most provisions apply, including Annex III high-risk",
+      "2027-08-02": "Annex I high-risk (safety components of regulated products)"
+    }
+  }
+}

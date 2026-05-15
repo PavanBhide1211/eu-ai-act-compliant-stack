@@ -1,0 +1,74 @@
+# Article 8 / Annex IV — Intended purpose of the AI system.
+# This file is read at boot, exposed via the /compliance/intended-purpose endpoint,
+# and version-controlled. Any change to it triggers a re-classification review
+# under the change-management procedure.
+
+system_id: cv-screener-eu-ai-act-demo
+version: "0.2.0-day2"
+provider: Acme Compliance Demos GmbH
+provider_contact: compliance@example.eu
+intended_purpose: >
+  Assist human recruiters by scoring the fit of submitted candidate CVs against
+  a structured job description, and producing a recommended action
+  (shortlist / borderline / reject) along with an explanation. The recommendation
+  is advisory only; every hiring decision must be made by a competent human
+  reviewer using the system's transparency and oversight controls.
+
+intended_deployers:
+  - Internal HR teams of medium and large enterprises in the EU/EEA.
+  - HR-tech platforms offering screening as a feature to enterprise customers.
+
+intended_users:
+  - Recruiters and HR specialists with documented training in fair recruitment
+    practices and in the use of this system.
+
+risk_classification:
+  tier: high_risk
+  basis: "Annex III, point 4(a) — Employment, workers management and access to self-employment."
+  rationale: >
+    The system is intended to be used for the recruitment or selection of
+    natural persons, namely to analyse and filter job applications and to
+    evaluate candidates. This brings it within Annex III, point 4(a).
+
+prohibited_uses:
+  - Sole-decision hiring without human review.
+  - Inference of protected attributes (race, religion, sexual orientation,
+    political opinion, trade-union membership, health, etc.) as features.
+  - Emotion inference from CV photos.
+  - Use on candidates outside the contracted geography / language scope.
+
+known_limitations:
+  - Performance degrades on CVs in languages outside the supported locale set.
+  - Performance degrades on CVs without sufficient structure (free-form CV
+    longer than 3 pages and with no headings).
+  - Subgroup parity is monitored continuously; deployers should review the
+    monthly bias report before relying on shortlist outputs at scale.
+
+declared_accuracy:
+  overall_top3_precision: 0.78
+  per_locale:
+    en: 0.81
+    de: 0.79
+    fr: 0.77
+    es: 0.76
+    it: 0.76
+  caveat: >
+    Reported on the v0.2 evaluation set. Real-world accuracy is monitored under
+    the post-market monitoring system; subscribe to the monthly report.
+
+human_oversight_design:
+  - Every recommendation is rendered with an editable override and a "do not
+    use" toggle.
+  - Two-person review (Article 14 analogue) is required for shortlist
+    confirmations when the candidate pool exceeds 25 or when the score margin
+    between the top candidate and the next is below 0.05.
+  - Reviewer identity, action, and rationale are recorded for every decision.
+
+logging:
+  schema_reference: app/compliance/audit_log.py
+  retention_days: 365
+
+instructions_for_use:
+  language: en
+  document: docs/04-architecture.md
+  must_be_read_before_first_use: true

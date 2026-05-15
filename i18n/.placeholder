@@ -1,0 +1,1 @@
+Day 3 deliverable. JSON locale files + loader + patch_locale.py CLI for runtime locale patching. Seed locales: en, de, fr, es, it.

@@ -1,0 +1,3 @@
+Day 2 deliverable. React (Vite) UI with side-by-side panels:
+- Traditional stack output panel
+- Compliant stack output panel + ComplianceSidecar (audit log, model card, oversight controls)

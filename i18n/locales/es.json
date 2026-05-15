@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "locale": "es",
+    "name": "Español",
+    "schema_version": 1,
+    "reviewer": "seed (no revisado por traductor profesional)",
+    "reviewed_on": "2026-05-14"
+  },
+  "ui": {
+    "app_title": "Pila de IA conforme con el Reglamento de IA de la UE — demostración comparativa",
+    "subtitle": "Ambos backends producen una recomendación de preselección de CV a partir de las mismas entradas. El tradicional devuelve solo la respuesta. El conforme devuelve además las pruebas, los controles y la superficie de supervisión que el Reglamento de IA de la UE exige para un sistema de alto riesgo (Anexo III, punto 4(a)).",
+    "job_label": "Descripción del puesto",
+    "candidate_label": "CV del candidato",
+    "run_button": "Ejecutar ambas pilas",
+    "running": "Calculando...",
+    "language": "Idioma"
+  },
+  "panels": {
+    "traditional_title": "Pila tradicional",
+    "traditional_tag": "solo el modelo",
+    "traditional_callout": "Sin explicación. Sin confianza. Sin registro de auditoría. Sin supervisión. Sin ficha del modelo. Sin control de sesgo. Sin información al candidato. Así es la preselección por IA en la mayoría de los sistemas en producción hoy — y no es conforme para un caso de uso de alto riesgo del Reglamento de IA de la UE.",
+    "compliant_title": "Pila conforme",
+    "compliant_tag": "el modelo + los controles del Reglamento de IA de la UE",
+    "empty": "Ejecute la preselección para ver los resultados.",
+    "explanation_heading": "Explicación",
+    "envelope_heading": "Sobre de conformidad",
+    "envelope_intended": "Finalidad prevista verificada",
+    "envelope_pseudonymised": "Entrada pseudonimizada",
+    "envelope_audit": "Evento de auditoría registrado",
+    "envelope_bias": "Métricas de sesgo actualizadas",
+    "envelope_two_person": "Revisión por dos personas obligatoria",
+    "score": "puntuación",
+    "confidence": "confianza"
+  },
+  "compliance": {
+    "sidecar_title": "Panel de cumplimiento — pruebas en vivo de la solicitud {request_id}",
+    "sidecar_blurb": "Este panel se muestra junto a la decisión para que la persona que supervisa actúe con las pruebas a la vista. Es también la superficie que inspeccionará el auditor del responsable del despliegue y la autoridad nacional de vigilancia del mercado.",
+    "tab_oversight": "Artículo 14 — Supervisión humana",
+    "tab_audit": "Artículo 12 — Registro de auditoría",
+    "tab_model_card": "Artículo 13 — Ficha del modelo",
+    "tab_bias": "Artículo 15/72 — Monitor de sesgo",
+    "oversight_blurb": "El artículo 14 exige que el sistema esté diseñado de forma que una persona competente pueda intervenir, anular o rechazar el uso de la salida de la IA. Los controles a continuación son puntos de API de primera clase, no una capa de interfaz. Se exige justificación y se almacena en el registro de auditoría.",
+    "reviewer_id": "ID de la persona revisora",
+    "action": "Acción",
+    "override_to": "Anular hacia",
+    "rationale": "Justificación (10 caracteres o más)",
+    "record_action": "Registrar acción de supervisión",
+    "history_heading": "Historial de supervisión de esta decisión",
+    "no_actions": "Aún no hay acciones.",
+    "audit_blurb": "El artículo 12 exige el registro automático de eventos relevantes para la identificación de riesgos y la vigilancia poscomercialización. Cada evento forma parte de una cadena de hashes; la verificación a la derecha confirma la integridad de la cadena.",
+    "chain_ok": "Verificación de la cadena: OK",
+    "chain_broken": "Verificación de la cadena: ROTA",
+    "model_card_blurb": "Artículo 13 — transparencia hacia el responsable del despliegue. Esta ficha se genera a partir de las mismas fuentes con las que opera el sistema, de modo que en cuanto cambia algo — registro de riesgos, linaje de datos, exactitud declarada — la ficha cambia con ello.",
+    "bias_blurb": "Artículo 15 (exactitud / robustez) + Artículo 72 (vigilancia poscomercialización). Las diferencias en la tasa de preselección entre cohortes pseudonimizadas se calculan de forma continua; se emite una alerta cuando se supera el umbral configurado. Las cohortes son: idioma + tramo de experiencia, derivadas con las salvaguardias del artículo 10(5).",
+    "recompute": "Recalcular ahora",
+    "annex_iv_link": "Expediente técnico completo del Anexo IV"
+  },
+  "disclosure": {
+    "candidate": "Está siendo evaluado·a con la ayuda de un sistema de inteligencia artificial. La IA produce solo una recomendación; toda decisión de contratación la toma una persona reclutadora. Tiene derecho a solicitar una revisión humana de cualquier evaluación asistida por IA y a impugnar el resultado. Contacto: compliance@example.eu."
+  },
+  "errors": {
+    "request_failed": "La solicitud ha fallado",
+    "rationale_too_short": "La justificación debe tener al menos 10 caracteres."
+  }
+}

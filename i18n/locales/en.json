@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "locale": "en",
+    "name": "English",
+    "schema_version": 1,
+    "reviewer": "seed",
+    "reviewed_on": "2026-05-14"
+  },
+  "ui": {
+    "app_title": "EU AI Act compliant AI stack — side-by-side demo",
+    "subtitle": "Both backends produce a CV-screening recommendation from the same inputs. The traditional one returns the answer. The compliant one also returns the evidence, the controls, and the oversight surface the EU AI Act requires for a high-risk system (Annex III, point 4(a)).",
+    "job_label": "Job description",
+    "candidate_label": "Candidate CV",
+    "run_button": "Run both stacks",
+    "running": "Scoring...",
+    "language": "Language"
+  },
+  "panels": {
+    "traditional_title": "Traditional stack",
+    "traditional_tag": "just the model",
+    "traditional_callout": "No explanation. No confidence. No audit trail. No oversight. No model card. No bias check. No candidate disclosure. This is what most production AI screening looks like today — and it is not compliant for a high-risk EU AI Act use case.",
+    "compliant_title": "Compliant stack",
+    "compliant_tag": "model + the EU AI Act controls around it",
+    "empty": "Run the screening to see output.",
+    "explanation_heading": "Explanation",
+    "envelope_heading": "Compliance envelope",
+    "envelope_intended": "Intended-purpose checked",
+    "envelope_pseudonymised": "Input pseudonymised",
+    "envelope_audit": "Audit event written",
+    "envelope_bias": "Bias metrics refreshed",
+    "envelope_two_person": "Two-person oversight required",
+    "score": "score",
+    "confidence": "confidence"
+  },
+  "compliance": {
+    "sidecar_title": "Compliance sidecar — live evidence for request {request_id}",
+    "sidecar_blurb": "This panel is rendered next to the decision so the reviewer can act with the evidence in view. It is also the surface the deployer's auditor and the national market surveillance authority will inspect.",
+    "tab_oversight": "Article 14 — Human oversight",
+    "tab_audit": "Article 12 — Audit log",
+    "tab_model_card": "Article 13 — Model card",
+    "tab_bias": "Article 15/72 — Bias monitor",
+    "oversight_blurb": "Article 14 requires the system to be designed so that a competent human can intervene, override, or refuse to use the AI's output. The controls below are first-class endpoints, not a UI overlay. Rationale is required and stored in the audit log.",
+    "reviewer_id": "Reviewer ID",
+    "action": "Action",
+    "override_to": "Override to",
+    "rationale": "Rationale (10+ chars)",
+    "record_action": "Record oversight action",
+    "history_heading": "Oversight history for this decision",
+    "no_actions": "No actions yet.",
+    "audit_blurb": "Article 12 requires automatic logging of events relevant to risk identification and post-market monitoring. Each event below is part of a hash-chain; the verification check on the right confirms the chain is intact.",
+    "chain_ok": "Chain verification: OK",
+    "chain_broken": "Chain verification: BROKEN",
+    "model_card_blurb": "Article 13 transparency to the deployer. This card is generated from the same sources of truth the system runs on, so the moment something changes — risk register, dataset lineage, declared accuracy — the card changes with it.",
+    "bias_blurb": "Article 15 (accuracy / robustness) + Article 72 (post-market monitoring). Selection-rate deltas between pseudonymised cohorts are computed continuously; an alert is raised when the configured threshold is exceeded. Cohorts are locale + experience band, derived under Article 10(5) safeguards.",
+    "recompute": "Recompute now",
+    "annex_iv_link": "Full Annex IV technical documentation pack"
+  },
+  "disclosure": {
+    "candidate": "You are being assessed with the assistance of an AI system. The AI produces a recommendation only; every hiring decision is made by a human recruiter. You have the right to request a human review of any AI-assisted assessment and to contest the outcome. Contact: compliance@example.eu."
+  },
+  "errors": {
+    "request_failed": "Request failed",
+    "rationale_too_short": "Rationale must be at least 10 characters."
+  }
+}

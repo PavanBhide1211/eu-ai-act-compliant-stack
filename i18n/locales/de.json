@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "locale": "de",
+    "name": "Deutsch",
+    "schema_version": 1,
+    "reviewer": "seed (nicht professionell überprüft)",
+    "reviewed_on": "2026-05-14"
+  },
+  "ui": {
+    "app_title": "EU-KI-Verordnung-konformer KI-Stack — Vergleichsdemo",
+    "subtitle": "Beide Backends erzeugen aus denselben Eingaben eine Empfehlung zur CV-Vorauswahl. Die traditionelle Variante liefert nur die Antwort. Die konforme Variante liefert zusätzlich die Belege, die Kontrollen und die Aufsichtsoberfläche, die die EU-KI-Verordnung für ein Hochrisikosystem (Anhang III, Nr. 4(a)) verlangt.",
+    "job_label": "Stellenbeschreibung",
+    "candidate_label": "Kandidaten-CV",
+    "run_button": "Beide Stacks ausführen",
+    "running": "Bewertung läuft...",
+    "language": "Sprache"
+  },
+  "panels": {
+    "traditional_title": "Traditioneller Stack",
+    "traditional_tag": "nur das Modell",
+    "traditional_callout": "Keine Erklärung. Keine Konfidenz. Kein Prüfprotokoll. Keine menschliche Aufsicht. Keine Modellkarte. Keine Verzerrungsprüfung. Keine Offenlegung gegenüber dem Kandidaten. So sieht KI-gestützte Vorauswahl heute in den meisten Produktivsystemen aus — und sie ist für einen Hochrisiko-Anwendungsfall der EU-KI-Verordnung nicht konform.",
+    "compliant_title": "Konformer Stack",
+    "compliant_tag": "Modell + die Kontrollen der EU-KI-Verordnung",
+    "empty": "Bitte führen Sie die Bewertung aus, um Ergebnisse zu sehen.",
+    "explanation_heading": "Erklärung",
+    "envelope_heading": "Compliance-Umschlag",
+    "envelope_intended": "Verwendungszweck geprüft",
+    "envelope_pseudonymised": "Eingabe pseudonymisiert",
+    "envelope_audit": "Audit-Ereignis geschrieben",
+    "envelope_bias": "Verzerrungs-Metriken aktualisiert",
+    "envelope_two_person": "Vier-Augen-Prinzip erforderlich",
+    "score": "Punktzahl",
+    "confidence": "Konfidenz"
+  },
+  "compliance": {
+    "sidecar_title": "Compliance-Beipanel — Live-Belege für Anfrage {request_id}",
+    "sidecar_blurb": "Dieses Panel wird neben der Entscheidung angezeigt, damit die Prüfperson mit den Belegen im Blick handeln kann. Es ist zugleich die Oberfläche, die der Auditor des Betreibers und die nationale Marktüberwachungsbehörde einsehen werden.",
+    "tab_oversight": "Artikel 14 — Menschliche Aufsicht",
+    "tab_audit": "Artikel 12 — Prüfprotokoll",
+    "tab_model_card": "Artikel 13 — Modellkarte",
+    "tab_bias": "Artikel 15/72 — Verzerrungs-Monitor",
+    "oversight_blurb": "Artikel 14 verlangt, dass das System so gestaltet ist, dass eine fachkundige Person eingreifen, übersteuern oder die Verwendung der KI-Ausgabe ablehnen kann. Die folgenden Kontrollen sind eigenständige Endpunkte, kein UI-Aufsatz. Eine Begründung ist erforderlich und wird im Prüfprotokoll gespeichert.",
+    "reviewer_id": "Prüfer-ID",
+    "action": "Aktion",
+    "override_to": "Übersteuern auf",
+    "rationale": "Begründung (mind. 10 Zeichen)",
+    "record_action": "Aufsichtsaktion erfassen",
+    "history_heading": "Aufsichtsverlauf für diese Entscheidung",
+    "no_actions": "Bisher keine Aktionen.",
+    "audit_blurb": "Artikel 12 verlangt die automatische Protokollierung von Ereignissen, die für Risikoerkennung und nachgelagerte Überwachung relevant sind. Jedes Ereignis unten ist Teil einer Hash-Kette; die Prüfung rechts bestätigt die Unversehrtheit der Kette.",
+    "chain_ok": "Ketten-Prüfung: OK",
+    "chain_broken": "Ketten-Prüfung: UNTERBROCHEN",
+    "model_card_blurb": "Artikel 13 — Transparenz gegenüber dem Betreiber. Diese Karte wird aus denselben Quellen erzeugt, mit denen das System arbeitet. Sobald sich etwas ändert — Risikoregister, Datenherkunft, deklarierte Genauigkeit — ändert sich auch die Karte.",
+    "bias_blurb": "Artikel 15 (Genauigkeit / Robustheit) + Artikel 72 (nachgelagerte Überwachung). Auswahlraten-Differenzen zwischen pseudonymisierten Kohorten werden laufend berechnet; ein Alarm wird ausgelöst, wenn die konfigurierte Schwelle überschritten wird. Kohorten = Sprache + Erfahrungsband, abgeleitet unter den Schutzmaßnahmen aus Artikel 10(5).",
+    "recompute": "Jetzt neu berechnen",
+    "annex_iv_link": "Vollständige Anhang-IV-Dokumentation"
+  },
+  "disclosure": {
+    "candidate": "Sie werden mit Unterstützung eines KI-Systems bewertet. Die KI erzeugt lediglich eine Empfehlung; jede Einstellungsentscheidung trifft eine Recruiterin oder ein Recruiter. Sie haben das Recht, eine menschliche Überprüfung jeder KI-gestützten Bewertung zu verlangen und das Ergebnis anzufechten. Kontakt: compliance@example.eu."
+  },
+  "errors": {
+    "request_failed": "Anfrage fehlgeschlagen",
+    "rationale_too_short": "Begründung muss mindestens 10 Zeichen enthalten."
+  }
+}
